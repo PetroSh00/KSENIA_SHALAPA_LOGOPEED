@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запуск мовлення</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <img src="../img/logogo.png" class="nav__logo">
+        <div class="nav__links">
+            <a href="../index.html">Головна</a>
+            <a href="../courses.html">Курси</a>
+            <div class="lang">
+                <button data-lang="ua">UA</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero animate">
+        <h1 data-i18n="heroTitle">Запуск мовлення з повагою до дитини</h1>
+        <p data-i18n="heroSubtitle">
+            Авторська методика логопеда з 15-річним досвідом
+        </p>
+    </section>
+
+    <section class="section animate">
+        <h2>Про курс</h2>
+        <p>
+            Курс створений для батьків дітей 2–4 років,
+            які ще не говорять або мають затримку мовлення.
+        </p>
+
+        <button class="btn btn--primary" data-open-modal data-i18n="buy">
+            Придбати курс
+        </button>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <h3>Як придбати курс</h3>
+            <p>
+                Для придбання курсу напишіть у Direct Instagram
+                або за посиланням у профілі.
+            </p>
+            <p>
+                Instagram:
+                <a href="https://www.instagram.com/shalapa_logoped/" target="_blank">
+                    @shalapa_logoped
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

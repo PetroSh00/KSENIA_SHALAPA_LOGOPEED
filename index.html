@@ -2,16 +2,16 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ксенія Шала — логопед</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
     <nav class="nav">
-        <img src="./img/logogo.png" class="nav__logo">
+        <img src="./img/logogo.png" class="nav__logo" alt="Shalapa Logoped">
         <div class="nav__links">
             <a href="index.html">Головна</a>
             <a href="about.html">Про мене</a>
@@ -20,35 +20,77 @@
     </nav>
 
     <header class="hero">
-        <h1 class="hero__title">
-            Запуск мовлення з повагою до дитини
-        </h1>
-        <p class="hero__text">
-            Авторська методика для дітей з особливостями розвитку.
-            15 років досвіду. 2500+ сімей.
-        </p>
-        <a href="courses.html" class="button">Переглянути курси</a>
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Запуск мовлення<br>з повагою до дитини
+            </h1>
+            <p class="hero__subtitle">
+                Авторська методика логопеда з 15-річним досвідом.
+                Понад 2500 сімей вже отримали результат.
+            </p>
+            <a href="courses.html" class="btn btn--primary">
+                Переглянути курси
+            </a>
+        </div>
     </header>
 
     <section class="section">
         <h2 class="section__title">Чому мені довіряють</h2>
+
         <div class="cards">
             <div class="card">
-                <h3 class="card__title">15 років практики</h3>
-                <p class="card__text">РАС, ДЦП, синдром Дауна</p>
+                <h3 class="card__title">15 років досвіду</h3>
+                <p class="card__text">
+                    Робота з дітьми з РАС, ДЦП, синдромом Дауна,
+                    затримкою мовленнєвого розвитку.
+                </p>
             </div>
+
             <div class="card">
-                <h3 class="card__title">Мама 3 дітей</h3>
-                <p class="card__text">Працюю м’яко та екологічно</p>
+                <h3 class="card__title">Мама трьох дітей</h3>
+                <p class="card__text">
+                    Я добре знаю, як важливо працювати без тиску
+                    і з повагою до темпу дитини.
+                </p>
             </div>
+
             <div class="card">
                 <h3 class="card__title">2500+ учнів</h3>
-                <p class="card__text">Реальні результати</p>
+                <p class="card__text">
+                    Онлайн-курси, які реально працюють
+                    і дають зрозумілу систему.
+                </p>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section class="section section--soft">
+        <h2 class="section__title">Як проходить робота</h2>
+
+        <div class="timeline">
+            <div class="timeline__item">
+                <span>01</span>
+                <p>Оцінка мовленнєвого розвитку</p>
+            </div>
+            <div class="timeline__item">
+                <span>02</span>
+                <p>Формування базових навичок</p>
+            </div>
+            <div class="timeline__item">
+                <span>03</span>
+                <p>Перші слова та фрази</p>
+            </div>
+            <div class="timeline__item">
+                <span>04</span>
+                <p>Закріплення результату</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © 2026 Shalapa Logoped
+    </footer>
+
 </body>
 
 </html>

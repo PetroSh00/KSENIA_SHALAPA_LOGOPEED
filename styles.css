@@ -1,18 +1,20 @@
-/* ====== RESET ====== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* VARIABLES */
 :root {
     --dark: #2F4858;
     --accent: #FFD27D;
     --bg: #F4F7F8;
-    --white: #FFFFFF;
+    --white: #fff;
     --muted: #6b7c85;
 }
 
+/* BASE */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
@@ -20,7 +22,7 @@ body {
     line-height: 1.6;
 }
 
-/* ====== NAV ====== */
+/* NAV */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -29,11 +31,11 @@ body {
     background: var(--white);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .nav__logo {
-    height: 40px;
+    height: 42px;
 }
 
 .nav__links a {
@@ -43,12 +45,12 @@ body {
     font-weight: 500;
 }
 
-/* ====== HERO ====== */
+/* HERO */
 .hero {
-    padding: 72px 20px;
-    background: linear-gradient(rgba(255, 255, 255, .85),
-            rgba(255, 255, 255, .85)),
+    background:
+        linear-gradient(rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)),
         url("./img/bac.JPG") center/cover;
+    padding: 96px 20px;
 }
 
 .hero__title {
@@ -56,26 +58,32 @@ body {
     max-width: 520px;
 }
 
-.hero__text {
-    margin: 16px 0 28px;
-    color: var(--muted);
+.hero__subtitle {
+    margin: 16px 0 32px;
     max-width: 420px;
+    color: var(--muted);
 }
 
-.button {
-    display: inline-block;
-    padding: 14px 28px;
+/* BUTTON */
+.btn {
+    padding: 14px 32px;
     border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn--primary {
     background: var(--accent);
     color: var(--dark);
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
 }
 
-/* ====== SECTION ====== */
+/* SECTION */
 .section {
-    padding: 64px 20px;
+    padding: 72px 20px;
+}
+
+.section--soft {
+    background: #eef2f3;
 }
 
 .section__title {
@@ -83,7 +91,11 @@ body {
     margin-bottom: 32px;
 }
 
-/* ====== CARDS ====== */
+.section__text {
+    max-width: 700px;
+}
+
+/* CARDS */
 .cards {
     display: grid;
     gap: 24px;
@@ -93,59 +105,78 @@ body {
     background: var(--white);
     border-radius: 24px;
     padding: 24px;
-    transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 16px;
+/* TIMELINE */
+.timeline {
+    display: grid;
+    gap: 16px;
 }
 
-.card__title {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.card__text {
-    color: var(--muted);
-    margin-bottom: 16px;
-}
-
-/* HOVER (активируется на desktop) */
-@media (hover: hover) {
-    .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, .08);
-    }
-}
-
-/* ====== MODAL ====== */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .45);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.modal.is-active {
+.timeline__item {
     display: flex;
+    gap: 12px;
 }
 
-.modal__content {
-    background: var(--white);
-    border-radius: 24px;
-    padding: 32px;
-    max-width: 420px;
+.timeline__item span {
+    font-weight: 700;
+}
+
+/* ABOUT */
+.about__grid {
+    display: grid;
+    gap: 32px;
+}
+
+.about__image {
     width: 100%;
-    text-align: center;
+    border-radius: 24px;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (min-width: 768px) {
+.about__title {
+    font-size: 32px;
+}
+
+.about__list {
+    margin-top: 16px;
+}
+
+/* COURSES */
+.course-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.course-tile {
+    height: 260px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.course-tile__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .6));
+    color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--white);
+}
+
+/* RESPONSIVE */
+@media (min-width:768px) {
     .hero__title {
         font-size: 40px;
     }
@@ -153,24 +184,83 @@ body {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-@media (min-width: 1024px) {
+@media (min-width:1024px) {
     .hero {
-        padding: 120px 80px;
+        padding: 140px 80px;
     }
 
     .section {
         padding: 96px 80px;
     }
 
-    .cards {
+    .course-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* =====================
+   ANIMATIONS
+===================== */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
 
-@media (min-width: 1280px) {
-    body {
-        font-size: 18px;
-    }
+.animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================
+   MODAL
+===================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 100;
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+.modal__content {
+    position: relative;
+    background: white;
+    max-width: 420px;
+    margin: 15vh auto;
+    padding: 32px;
+    border-radius: 24px;
+}
+
+/* =====================
+   LANG SWITCH
+===================== */
+.lang {
+    display: flex;
+    gap: 8px;
+}
+
+.lang button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
 }

@@ -2,47 +2,63 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Про мене — Ксенія Шала</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-    <section>
-        <h1>Ксенія Шала</h1>
+    <nav class="nav">
+        <img src="./img/logogo.png" class="nav__logo">
+        <div class="nav__links">
+            <a href="index.html">Головна</a>
+            <a href="about.html">Про мене</a>
+            <a href="courses.html">Курси</a>
+        </div>
+    </nav>
 
-        <p>
-            Я — логопед, нейропедагог та автор власної методики запуску мовлення.
-            Уже понад <b>15 років</b> я допомагаю дітям заговорити,
-            навіть у складних випадках.
-        </p>
+    <section class="section about">
+        <div class="about__grid">
+            <img src="./img/IMG_2362.JPG" class="about__image">
 
-        <p>
-            Я — мама трьох дітей, тому добре знаю,
-            як важливо працювати з дитиною м’яко,
-            без тиску та з повагою до її темпу розвитку.
-        </p>
+            <div>
+                <h1 class="about__title">Ксенія Шала</h1>
+                <p class="about__text">
+                    Я — логопед, нейропедагог, автор методики запуску мовлення.
+                    Уже понад 15 років я допомагаю дітям заговорити —
+                    навіть у складних випадках.
+                </p>
 
-        <p>
-            Працюю з дітьми з:
-        <ul>
-            <li>РАС</li>
-            <li>синдромом Дауна</li>
-            <li>ДЦП</li>
-            <li>затримкою мовленнєвого розвитку</li>
-        </ul>
-        </p>
+                <p class="about__text">
+                    Я мама трьох дітей, тому добре знаю,
+                    наскільки важливо працювати з дитиною
+                    м’яко, без страху та примусу.
+                </p>
 
-        <p>
-            Мої онлайн-курси вже пройшли <b>2500+ сімей</b>.
-            Це не просто навчання — це підтримка,
-            системність та реальні результати.
+                <ul class="about__list">
+                    <li>✔ Авторська система запуску мовлення</li>
+                    <li>✔ Сенсорна інтеграція</li>
+                    <li>✔ Робота з РАС, ДЦП, синдромом Дауна</li>
+                    <li>✔ Понад 2500 сімей</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--soft">
+        <h2 class="section__title">Моя філософія</h2>
+        <p class="section__text">
+            Кожна дитина має власний темп розвитку.
+            Моє завдання — створити умови,
+            у яких мовлення з’являється природно,
+            через гру, контакт і підтримку.
         </p>
     </section>
 
-    <script src="script.js"></script>
+    <footer class="footer">© 2026 Shalapa Logoped</footer>
+
 </body>
 
 </html>

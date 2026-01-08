@@ -2,40 +2,55 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Курси</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
+    <nav class="nav">
+        <img src="./img/logogo.png" class="nav__logo">
+        <div class="nav__links">
+            <a href="index.html">Головна</a>
+            <a href="about.html">Про мене</a>
+            <a href="courses.html">Курси</a>
+        </div>
+    </nav>
+
     <section class="section">
         <h1 class="section__title">Онлайн-курси</h1>
 
-        <div class="cards">
-            <div class="card">
-                <img src="./img/IMG_2356.JPG">
-                <h3 class="card__title">Запуск мовлення 2–4 роки</h3>
-                <p class="card__text">
-                    Покрокова система для батьків,
-                    які хочуть допомогти дитині заговорити.
-                </p>
-                <button class="button" onclick="openModal()">Дізнатися більше</button>
-            </div>
+        <div class="course-grid">
+
+            <a href="courses/speech-launch.html" class="course-tile" style="background-image:url('./img/IMG_2356.JPG')">
+                <div class="course-tile__overlay">
+                    <h3>Запуск мовлення</h3>
+                    <p>Перші слова та фрази</p>
+                </div>
+            </a>
+
+            <a href="courses/sounds.html" class="course-tile" style="background-image:url('./img/IMG_2365.JPG')">
+                <div class="course-tile__overlay">
+                    <h3>Звуки та артикуляція</h3>
+                    <p>Чітка вимова</p>
+                </div>
+            </a>
+
+            <a href="courses/sensory.html" class="course-tile"
+                style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf')">
+                <div class="course-tile__overlay">
+                    <h3>Сенсорна інтеграція</h3>
+                    <p>Основа мовлення</p>
+                </div>
+            </a>
+
         </div>
     </section>
 
-    <div id="modal" class="modal">
-        <div class="modal__content">
-            <h2>Запис на курс</h2>
-            <p>Напишіть у Instagram <b>@shalapa_logoped</b></p>
-            <button class="button" onclick="closeModal()">Закрити</button>
-        </div>
-    </div>
+    <footer class="footer">© 2026 Shalapa Logoped</footer>
 
-    <script src="script.js"></script>
-    hhggggit add . && git commit -m "update" && git push
 </body>
 
 </html>
