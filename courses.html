@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курси</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <section class="section">
+        <h1 class="section__title">Онлайн-курси</h1>
+
+        <div class="cards">
+            <div class="card">
+                <img src="./img/IMG_2356.JPG">
+                <h3 class="card__title">Запуск мовлення 2–4 роки</h3>
+                <p class="card__text">
+                    Покрокова система для батьків,
+                    які хочуть допомогти дитині заговорити.
+                </p>
+                <button class="button" onclick="openModal()">Дізнатися більше</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <h2>Запис на курс</h2>
+            <p>Напишіть у Instagram <b>@shalapa_logoped</b></p>
+            <button class="button" onclick="closeModal()">Закрити</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
